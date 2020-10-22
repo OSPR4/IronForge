@@ -1,19 +1,69 @@
 ﻿@{
-        ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home Page";
 }
-<style>
-    body, html {
-        height: 100%;
-    }
-    .bg {
-        /* The image used */
-        background-image: url("../Images/Gym.jpg");
-        /* Full height */
-        height: 50%;
-        /* Center and scale the image nicely */
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-</style>
-<div class="bg"></div>
+
+
+<!-- Hero Section Begin -->
+<section class="hero">
+    <div class="hero__slider owl-carousel">
+        <div class="hero__items set-bg" data-setbg="../Images/hero/Gym.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-5 col-lg-7 col-md-8">
+                        <div class="hero__text">
+                            <h2 style="color:white">Workout Essentials</h2>
+
+                            <a href="#" class="primary-btn">Shop now <span class="arrow_right"></span></a>
+                            @*<div class="hero__social">
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-pinterest"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                </div>*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero__items set-bg" data-setbg="../Images/hero/Man_lifting_a_heavy_barbell(BW).jpg">
+            @*../Images/hero/Man_lifting_a_heavy_barbell(BW).jpg*@
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-5 col-lg-7 col-md-8">
+                        <div class="hero__text">
+
+                            <h2 style="color:white">Workout Essentials</h2>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Hero Section End -->
+
+
+
+
+
+
+
+
+@*<style>
+        body, html {
+            height: 100%;
+        }
+        .bg {
+            /* The image used */
+            background-image: url("../Images/Gym.jpg");
+            /* Full height */
+            height: 50%;
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+    <div class="bg"></div>*@
