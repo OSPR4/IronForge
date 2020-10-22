@@ -20,13 +20,13 @@ namespace IronForge.Controllers
 
         }
 
-        public IActionResult List()
-        {
-            ProductListViewModel productListViewModel = new ProductListViewModel();
-            productListViewModel.Products = _productRepository.AllProducts;
+        //public IActionResult List()
+        //{
+        //    ProductListViewModel productListViewModel = new ProductListViewModel();
+        //    productListViewModel.Products = _productRepository.AllProducts;
 
-            return View(productListViewModel);
-        }
+        //    return View(productListViewModel);
+        //}
 
         //public IActionResult List()
         //{
@@ -35,29 +35,30 @@ namespace IronForge.Controllers
 
         //    return View(productListViewModel);
         //}
-        //public ViewResult List(string category)
-        //{
-        //    IEnumerable<Product> products;
-        //    string currentCategory;
+        public ViewResult List(string category)
+        {
+            IEnumerable<Product> products;
+            string currentCategory;
 
-        //    if (string.IsNullOrEmpty(category))
-        //    {
-        //        products = _productRepository.AllProducts.OrderBy(p => p.ProductId);
-        //        currentCategory = "All Products";
-        //    }
-        //    else
-        //    {
-        //        products = _productRepository.AllProducts.Where(p => p.Category.Name == category)
-        //            .OrderBy(p => p.ProductId);
-        //        currentCategory = _categoryRepository.AllCategories.FirstOrDefault(c => c.Name == category)?.Name;
-        //    }
+            if (string.IsNullOrEmpty(category))
+            {
+                products = _productRepository.AllProducts.OrderBy(p => p.ProductId);
+                currentCategory = "All Products";
+            }
+            else
+            {
+                products = _productRepository.AllProducts.Where(p => p.Category.Name == category)
+                    .OrderBy(p => p.ProductId);
+                currentCategory = _categoryRepository.AllCategories.FirstOrDefault(c => c.Name == category)?.Name;
+            }
 
-        //    return View(new ProductListViewModel
-        //    {
-        //        Products = products,
-        //        CurrentCategory = currentCategory
-        //    });
-        //}
+            return View(new ProductListViewModel
+            {
+                Products = products,
+                CurrentCategory = currentCategory
+            });
+        }
+
         public IActionResult Details(int id)
         {
             var product = _productRepository.GetProductById(id);

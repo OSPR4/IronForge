@@ -60,7 +60,8 @@
                     <nav class="header__menu mobile-menu">
                         <ul>
                             <li class="active"><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                            <li><a asp-controller="Product" asp-action="List">Products</a></li>
+                       
+                            @await Component.InvokeAsync("CategoryMenu") 
                             <li>
                                 <a href="#">Pages</a>
                                 <ul class="dropdown">
