@@ -104,10 +104,16 @@ namespace IronForge.Models
             _appDbContext.SaveChanges();
         }
 
-        public decimal GetShoppingCartTotal()
+        public decimal GetShoppingCartPriceTotal()
         {
             var total = _appDbContext.ShoppingCartItems.Where(c => c.ShoppingCartId == ShoppingCartId)
                 .Select(c => c.Product.Price * c.Amount).Sum();
+            return total;
+        }
+        public int GetShoppingCartItemTotal()
+        {
+            var total = _appDbContext.ShoppingCartItems.Where(c => c.ShoppingCartId == ShoppingCartId)
+                .Select(c => c.Amount).Sum();
             return total;
         }
     }

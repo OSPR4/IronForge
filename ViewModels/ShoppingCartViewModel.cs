@@ -9,6 +9,7 @@ namespace IronForge.ViewModels
     public class ShoppingCartViewModel
     {
         public ShoppingCart ShoppingCart { get; set; }
-        public decimal ShoppingCartTotal { get; set; }
+        public decimal ShoppingCartPriceTotal { get; set; }
+        public int ShoppingCartItemTotal { get; set; }
     }
 }

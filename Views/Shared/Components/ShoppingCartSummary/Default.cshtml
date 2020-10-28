@@ -3,11 +3,10 @@
 @if (Model.ShoppingCart.ShoppingCartItems.Count > 0)
 {
     <li>
-        <a>
-            <span class="glyphicon glyphicon-shopping-cart"></span>
-            <span id="cart-status">
-                @Model.ShoppingCart.ShoppingCartItems.Count
-            </span>
-        </a>
+            <a href="#"><img src="~/Images/icon/cart.png" alt=""> <span>@Model.ShoppingCartItemTotal</span></a>   
+            <div class="price">@Model.ShoppingCartPriceTotal.ToString("C2")</div>
+
     </li>
 }
+
+

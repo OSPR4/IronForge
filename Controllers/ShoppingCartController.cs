@@ -29,7 +29,7 @@ namespace IronForge.Controllers
             var shoppingCartViewModel = new ShoppingCartViewModel
             {
                 ShoppingCart = _shoppingCart,
-                ShoppingCartTotal = _shoppingCart.GetShoppingCartTotal()
+                ShoppingCartPriceTotal = _shoppingCart.GetShoppingCartPriceTotal()
             };
 
             return View(shoppingCartViewModel);

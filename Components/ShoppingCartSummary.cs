@@ -6,7 +6,7 @@ using IronForge.Models;
 using IronForge.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BethanysPieShop.Components
+namespace IronForge.Components
 {
     public class ShoppingCartSummary: ViewComponent
     {
@@ -26,7 +26,8 @@ namespace BethanysPieShop.Components
             var shoppingCartViewModel = new ShoppingCartViewModel
             {
                 ShoppingCart = _shoppingCart,
-                ShoppingCartTotal = _shoppingCart.GetShoppingCartTotal()
+                ShoppingCartPriceTotal = _shoppingCart.GetShoppingCartPriceTotal(),
+                ShoppingCartItemTotal = _shoppingCart.GetShoppingCartItemTotal()
 
             };
             return View(shoppingCartViewModel);
