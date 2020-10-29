@@ -1,3 +1,3 @@
 # IronForge
  
-eCommerce application at is built ASP.NET Core MVC
+eCommerce application at is built using ASP.NET Core MVC
