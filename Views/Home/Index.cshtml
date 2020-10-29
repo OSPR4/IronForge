@@ -1,8 +1,6 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
-
 <!-- Hero Section Begin -->
 <section class="hero">
     <div class="hero__slider owl-carousel">
@@ -14,13 +12,13 @@
                             <h2 style="color:white">Workout Essentials</h2>
 
                             <a asp-controller="Product" asp-action="List" class="primary-btn">Shop now <span class="arrow_right"></span></a>
-                            
+
                             @*<div class="hero__social">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-pinterest"></i></a>
-            <a href="#"><i class="fa fa-instagram"></i></a>
-        </div>*@
+                                    <a href="#"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-pinterest"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                </div>*@
                         </div>
                     </div>
                 </div>
@@ -43,9 +41,39 @@
         </div>
     </div>
 </section>
+
+<!-- Banner Section Begin -->
+<section class="banner spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="banner__item banner__item--middle">
+                    <div class="banner__item__pic">
+                        <img src="~/Images/squat_rack.jpg" />
+                    </div>
+                    <div class="banner__item__text">
+                        <h2>Squat Rack</h2>
+                        <a href="#">Shop now</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-5">
+                <div class="banner__item banner__item--middle">
+                    <div class="banner__item__pic">
+                        <img src="~/Images/BarbellRack2.jpg" />
+                    </div>
+                    <div class="banner__item__text">
+                        <h2>Barbell Rack</h2>
+                        <a href="#">Shop now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Banner Section End -->
 <!-- Hero Section End -->
-
-
 @*<style>
         body, html {
             height: 100%;
