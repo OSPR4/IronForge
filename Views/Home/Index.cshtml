@@ -49,11 +49,12 @@
             <div class="col-lg-5">
                 <div class="banner__item banner__item--middle">
                     <div class="banner__item__pic">
-                        <img src="~/Images/BarbellRack2.jpg" />
+                        <img src="~/Images/Plates.jpeg" />
                     </div>
                     <div class="banner__item__text">
-                        <h2>Barbell Rack</h2>
-                        <a href="#">Shop now</a>
+                        <h2>Plates</h2>
+                        <a asp-controller="Product" asp-action="List"
+                           asp-route-category="Plates">Shop now</a>
                     </div>
                 </div>
             </div>
@@ -63,8 +64,33 @@
                         <img src="~/Images/squat_rack.jpg" />
                     </div>
                     <div class="banner__item__text">
-                        <h2>Squat Rack</h2>
-                        <a href="#">Shop now</a>
+                        <h2>Squat Racks</h2>
+                        <a asp-controller="Product" asp-action="List"
+                           asp-route-category="Racks">Shop now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="banner__item banner__item--middle">
+                    <div class="banner__item__pic">
+                        <img src="~/Images/BarbellRack2.jpg" />
+                    </div>
+                    <div class="banner__item__text">
+                        <h2>Barbells</h2>
+                        <a asp-controller="Product" asp-action="List"
+                           asp-route-category="Barbells">Shop now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="banner__item banner__item--middle">
+                    <div class="banner__item__pic">
+                        <img src="~/Images/bench_press.jpg" />
+                    </div>
+                    <div class="banner__item__text">
+                        <h2>Benches</h2>
+                        <a asp-controller="Product" asp-action="List"
+                           asp-route-category="Benches">Shop now</a>
                     </div>
                 </div>
             </div>
@@ -72,6 +98,9 @@
     </div>
 </section>
 <!-- Banner Section End -->
+
+
+
 <!-- Hero Section End -->
 @*<style>
         body, html {
