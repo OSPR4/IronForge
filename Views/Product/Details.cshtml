@@ -1,44 +1,53 @@
 ﻿
 @model Product
 
-<div class="container">
-    <div class="col-lg-9">
-            <div class="card mt-4">
-                <img class="card-img-top img-fluid" src="@Url.Content(Model.ImageUrl)" alt="">
-                <div class="card-body">
-                    <h3 class="card-title">@Model.Name</h3>
-                    <h4>@Model.Price.ToString("c")</h4>
-                    <p class="card-text">@Model.LongDescription</p>
-                    <a class="btn btn-primary" asp-controller="ShoppingCart" asp-action="AddToShoppingCart" asp-route-productId="@Model.ProductId" role="button">Add to Cart</a>
+<!-- Shop Details Section Begin -->
+<section class="shop-details">
+    <div class="product__details__pic">
+        <div class="container">
 
-
-                </div>
-        </div>
-    </div>
-</div>
-
-
-
-
-@*<div class="container">
-        <div class="row">
-            <div class="col-lg-4 col-md-4 col-xs-4 thumb">
-                <div class="product-grid">
-                    <div class="product-image">
-                        <a href="#">
-                            <img src="@Url.Content(Model.ImageUrl)">
-                        </a>
-                    </div>
-                    <div class="product-content">
-                        <h3 class="title"><a href="#">@Model.Name</a></h3>
-                        <div class="price">@Model.Price.ToString("c")</div>
-                    </div>
-                    <ul class="social">
-                        <li><a href="" data-tip="View"><i class="fa fa-search"></i></a></li>
-                        <li><a href="" data-tip="Add to Cart"><i class="fa fa-shopping-cart"></i></a></li>
+            <div class="row">
+                <div class="col-lg-3 col-md-3">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab">
+                                <div class="product__thumb__pic set-bg" data-setbg="">
+                                </div>
+                            </a>
+                        </li>
                     </ul>
+                </div>
+
+                <div class="col-lg-6 col-md-9">
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="tabs-1" role="tabpanel">
+                            <div class="product__details__pic__item">
+                                <img src="@Url.Content(Model.ImageUrl)" alt="">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <hr>*@
+    <div class="product__details__content">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-8">
+                    <div class="product__details__text">
+                        <h4>@Model.Name</h4>
+                        <h3>@Model.Price.ToString("c")</h3>
+                        <p>
+                            @Model.LongDescription
+                        </p>
+                        <div class="product__details__cart__option">
+                            <a asp-controller="ShoppingCart" asp-action="AddToShoppingCart" asp-route-productId="@Model.ProductId" class="primary-btn">add to cart</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Shop Details Section End -->

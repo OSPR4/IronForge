@@ -1,11 +1,18 @@
 ﻿@model ProductListViewModel
 
 <div class="container">
-    <h1>Workout Essentials</h1>
+    <h1 style="text-align:center;">Workout Essentials</h1>
 </div>
 
-@foreach (var product in Model.Products)
-{
-    <partial name="_ProductCard" model="product" />
-   
-}
+
+<section class="product spad">
+    <div class="container">
+        <div class="row product__filter">
+            @foreach (var product in Model.Products)
+            {
+                <partial name="_ProductCard" model="product" />
+
+            }
+        </div>
+    </div>
+</section>
